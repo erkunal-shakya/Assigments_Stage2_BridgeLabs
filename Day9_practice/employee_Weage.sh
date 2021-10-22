@@ -1,30 +1,20 @@
-echo "Welcome to Employee Wage Computation Program"
+echo "Welcome to employee wage calculation"
 num=$((RANDOM%3))
-logHoursInDay=8
-costPerHour=20
-isPresentAsFullTime=2
-isPresentAsPartTime=1
-salary=0
 
-
-        if [ $num -eq $isPresentAsFullTime ]
-        then
-            salary=$((logHoursInDay*costPerHour))
-            echo "Employee Present As Full-Time"
-            echo "His/Her Earnings will be " $salary
-        elif [ $num -eq $isPresentAsPartTime ]
-        then
-            partTimeLogHoursInDay=$((logHoursInDay/2))
-            salary=$((partTimeLogHoursInDay*costPerHour))
-            echo "Employee Present As Part-Time"
-            echo "His/Her Earnings will be " $salary
-        else
-            echo "Employee Absent"
-            echo "His/Her Earnings will be " $salary
-        fi
-
-         case $extName in
-         js)
-            echo $item Is a JavaScript File
-         ;;
-        esac
+case $num in
+	0) echo "Employee is absent"
+	;;
+	1)c=$((20*8))
+	  d=$((c*20))
+	  echo "Employee is fulltime and wages is $c per day"
+	  echo "Wages of full time employee for month is $d"
+	;;
+	2)c=$((20*4))
+	  d=$((c*20))
+	  echo "Employee is fulltime and wages is $c per day"
+	  echo "Wages of full time employee for month is $d"
+	;;
+	*)
+    	 echo "Your Given Input Is Invalid , Please Check Again :("
+    	 ;;
+	esac
